@@ -16,5 +16,6 @@ namespace TrepiCoder {
 		bool pollEventMessages();
 
 		void update();
+		void render();
 	};
 }

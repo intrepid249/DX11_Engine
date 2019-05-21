@@ -57,4 +57,8 @@ namespace TrepiCoder {
 		}
 #pragma endregion
 	}
+	void Engine::render()
+	{
+		m_gfx->renderFrame();
+	}
 }

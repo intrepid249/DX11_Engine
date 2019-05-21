@@ -60,7 +60,7 @@ namespace TrepiCoder {
 		MSG msg;
 		ZeroMemory(&msg, sizeof(MSG)); // Initialize the memory structure
 
-		if (PeekMessage(
+		while (PeekMessage(
 			&msg, // where to store message (if one exists)
 			m_handle, // handle to the window to check messages for
 			0, // Minimim Filter Msg Value - Not filtering

@@ -8,13 +8,14 @@ namespace TrepiCoder {
 	class Graphics {
 	public:
 		bool initialize(HWND hwnd, int width, int height);
+		void renderFrame();
 
 	private:
 		bool initDirectX(HWND hwnd, int width, int height);
 
-		Microsoft::WRL::ComPtr<ID3D11Device> device;
-		Microsoft::WRL::ComPtr<ID3D11DeviceContext> deviceContext;
-		Microsoft::WRL::ComPtr<IDXGISwapChain> swapchain;
-		Microsoft::WRL::ComPtr<ID3D11RenderTargetView> renderTargetView;
+		Microsoft::WRL::ComPtr<ID3D11Device> m_device;
+		Microsoft::WRL::ComPtr<ID3D11DeviceContext> m_deviceContext;
+		Microsoft::WRL::ComPtr<IDXGISwapChain> m_swapchain;
+		Microsoft::WRL::ComPtr<ID3D11RenderTargetView> m_renderTargetView;
 	};
 }

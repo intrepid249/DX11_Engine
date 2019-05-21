@@ -11,6 +11,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance
 
 	while (app->pollEventMessages()) {
 		app->update();
+		app->render();
 	}
 
 	return EXIT_SUCCESS;
