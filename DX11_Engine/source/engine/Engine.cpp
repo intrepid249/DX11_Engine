@@ -25,6 +25,8 @@ namespace TrepiCoder {
 
 		if (!m_gfx->initialize(m_renderWindow->getWindowHandle(), width, height))
 			return false;
+
+		return true;
 	}
 
 	bool Engine::pollEventMessages() {

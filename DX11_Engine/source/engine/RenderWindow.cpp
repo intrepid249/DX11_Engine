@@ -3,6 +3,7 @@
 #include "util/ErrorLogger.h"
 
 #include "engine/WindowContainer.h"
+//#include "resource.h"
 
 namespace TrepiCoder {
 	RenderWindow::RenderWindow() {
@@ -46,6 +47,7 @@ namespace TrepiCoder {
 			ErrorLogger::Log(GetLastError(), "CreateWindowEx failed for window: " + m_windowTitle);
 			return false;
 		}
+
 
 		// Bring the window up on screen and set it as the main focus
 		ShowWindow(m_handle, SW_SHOW);
@@ -138,9 +140,9 @@ namespace TrepiCoder {
 		// Handle to the instance that contains the window procedure
 		wc.hInstance = m_hInstance;
 		// Handle to the class icon. Must be a handle to an Icon resource
-		wc.hIcon = NULL;
+		wc.hIcon =  LoadIcon(m_hInstance, IDI_APPLICATION);
 		// Handle to the small icon for the class
-		wc.hIconSm = NULL;
+		wc.hIconSm = LoadIcon(m_hInstance, IDI_APPLICATION);
 		// Handle to the class cursor. If null, an application must explicitly set the cursor shape whenever the mouse moves into the application window
 		wc.hCursor = LoadCursor(NULL, IDC_ARROW);
 		// Handle to the class background brush for the window's background colour. When NULL an application must paint its own background colour
